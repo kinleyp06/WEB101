@@ -11,7 +11,7 @@ export default function SignupPage() {
     setIsLoading(true);
     // In a real app, you would call a registration API here
     console.log('Signup data:', data);
-
+    
     // Simulate API call
     setTimeout(() => {
       setIsLoading(false);
@@ -30,9 +30,10 @@ export default function SignupPage() {
             Create a profile, follow other accounts, make your own videos, and more
           </p>
         </div>
-
+        
         <form className="mt-8 space-y-6" onSubmit={handleSubmit(onSubmit)}>
-          <div className="rounded-md shadow-sm space-y-4">
+          <div className="rounded-md shadow-sm -space-y-px">
+            {/* Username field */}
             <div className="mb-4">
               <label htmlFor="username" className="sr-only">Username</label>
               <input
@@ -54,7 +55,8 @@ export default function SignupPage() {
               />
               {errors.username && <p className="text-red-500 text-xs mt-1">{errors.username.message}</p>}
             </div>
-
+            
+            {/* Email field */}
             <div className="mb-4">
               <label htmlFor="email" className="sr-only">Email address</label>
               <input
@@ -72,7 +74,8 @@ export default function SignupPage() {
               />
               {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>}
             </div>
-
+            
+            {/* Password field */}
             <div className="mb-4">
               <label htmlFor="password" className="sr-only">Password</label>
               <input
@@ -94,7 +97,8 @@ export default function SignupPage() {
               />
               {errors.password && <p className="text-red-500 text-xs mt-1">{errors.password.message}</p>}
             </div>
-
+            
+            {/* Confirm Password field */}
             <div className="mb-4">
               <label htmlFor="confirmPassword" className="sr-only">Confirm Password</label>
               <input
@@ -109,49 +113,48 @@ export default function SignupPage() {
               />
               {errors.confirmPassword && <p className="text-red-500 text-xs mt-1">{errors.confirmPassword.message}</p>}
             </div>
-
-            <div className="flex items-center">
-              <input
-                id="terms"
-                type="checkbox"
-                className="h-4 w-4 text-red-600 focus:ring-red-500 border-gray-300 rounded"
-                {...register('terms', {
-                  required: 'You must agree to the terms and conditions'
-                })}
-              />
-              <label htmlFor="terms" className="ml-2 block text-sm text-gray-900">
-                I agree to the{' '}
-                <a href="#" className="font-medium text-red-600 hover:text-red-500">
-                  Terms of Service
-                </a>
-                {' '}and{' '}
-                <a href="#" className="font-medium text-red-600 hover:text-red-500">
-                  Privacy Policy
-                </a>
-              </label>
-            </div>
-            {errors.terms && <p className="text-red-500 text-xs">{errors.terms.message}</p>}
-
-            <div>
-              <button
-                type="submit"
-                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
-                disabled={isLoading}
-              >
-                {isLoading ? 'Creating account...' : 'Sign up'}
-              </button>
-            </div>
-
-            <div className="text-center mt-4">
-              <p className="text-sm text-gray-600">
-                Already have an account?{' '}
-                <Link href="/login" className="font-medium text-red-600 hover:text-red-500">
-                  Log in
-                </Link>
-              </p>
-            </div>
           </div>
+          
+          {/* Terms and conditions checkbox */}
+          <div className="flex items-center">
+            <input
+              id="terms"
+              type="checkbox"
+              className="h-4 w-4 text-red-600 focus:ring-red-500 border-gray-300 rounded"
+              {...register('terms', {
+                required: 'You must agree to the terms and conditions'
+              })}
+            />
+            <label htmlFor="terms" className="ml-2 block text-sm text-gray-900">
+              I agree to the{' '}
+              <a href="#" className="font-medium text-red-600 hover:text-red-500">
+                Terms of Service
+              </a>{' '}
+              and{' '}
+              <a href="#" className="font-medium text-red-600 hover:text-red-500">
+                Privacy Policy
+              </a>
+            </label>
+          </div>
+          {errors.terms && <p className="text-red-500 text-xs">{errors.terms.message}</p>}
+          
+          <button
+            type="submit"
+            className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+            disabled={isLoading}
+          >
+            {isLoading ? 'Creating account...' : 'Sign up'}
+          </button>
         </form>
+        
+        <div className="text-center mt-4">
+          <p className="text-sm text-gray-600">
+            Already have an account?{' '}
+            <Link href="/login" className="font-medium text-red-600 hover:text-red-500">
+              Log in
+            </Link>
+          </p>
+        </div>
       </div>
     </div>
   );
