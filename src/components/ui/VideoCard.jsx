@@ -6,7 +6,7 @@ import {
 } from 'react-icons/fa';
 
 export default function VideoCard({ post }) {
-    const [liked, setLiked] = useState(false); // Fixed: setLink -> setLiked
+    const [liked, setLiked] = useState(false); 
 
     //placeholder date
     const { username, caption, audio, likes, comments, shares } = post;
@@ -24,21 +24,21 @@ export default function VideoCard({ post }) {
 
             <div className='flex-1'>
                 {/* User info and caption */}
-                <div className='mb-2'> {/* Fixed: classname -> className */}
+                <div className='mb-2'> 
                     <span className='font-bold hover:underline cursor-pointer'>{username}</span>
                     <span className='text-sm ml-1'>• 2d ago</span>
                     <p className='text-sm mt-1'>{caption}</p>
                 </div>
 
-                {/* Audio info - moved inside the flex-1 div */}
+
                 <div className='flex items-center text-sm mb-3'>
                     <FaMusic className='mr-2 text-xs' />
-                    <span className='truncate max-w-[250px]'>{audio}</span> {/* Fixed: added brackets */}
+                    <span className='truncate max-w-250px'>{audio}</span> 
                 </div>
 
                 <div className='flex'>
                     {/* Video container */}
-                    <div className='mr-5 w-[300px] h-[530px] bg-black rounded-md flex items-center justify-center relative overflow-hidden'>
+                    <div className='mr-5 w-300px h-530px bg-black rounded-md flex items-center justify-center relative overflow-hidden'>
                         <p className='text-white'>Video Placeholder</p>
                         <div className='absolute bottom-4 left-4 text-white text-sm'>
                             <p className='mb-1'>0:30</p>
@@ -80,6 +80,6 @@ export default function VideoCard({ post }) {
                     </div>
                 </div>
             </div>
-        </div> {/* This closing div was missing */}
+        </div>
     );
 }
