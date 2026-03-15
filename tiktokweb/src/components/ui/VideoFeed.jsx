@@ -1,7 +1,7 @@
 'use client';
 import VideoCard from './VideoCard';
 
-// Sample data for our feed
+// Sample data for feed
 const DUMMY_POSTS = [
   {
     id: '1',

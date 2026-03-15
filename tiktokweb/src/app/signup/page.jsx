@@ -9,7 +9,6 @@ export default function SignupPage() {
 
   const onSubmit = async (data) => {
     setIsLoading(true);
-    // In a real app, you would call a registration API here
     console.log('Signup data:', data);
     
     // Simulate API call

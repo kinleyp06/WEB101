@@ -24,7 +24,7 @@ export default function ExplorePage() {
           {Array.from({ length: 12 }).map((_, index) => (
             <div
               key={index}
-              className="aspect-[9/16] bg-gray-300 rounded-md flex items-center justify-center hover:opacity-75 cursor-pointer"
+              className="aspect-9/16 bg-gray-300 rounded-md flex items-center justify-center hover:opacity-75 cursor-pointer"
             >
               <p className="text-sm text-center">Video {index + 1}</p>
             </div>

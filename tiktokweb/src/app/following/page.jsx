@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import VideoCard from '@/components/ui/VideoCard';
 
-// Sample data for following feed
 const FOLLOWING_POSTS = [
   {
     id: '101',
