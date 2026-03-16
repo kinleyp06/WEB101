@@ -40,7 +40,7 @@ export default function FollowingPage() {
       <h2 className="text-2xl font-bold mb-4">Following</h2>
       
       {posts.length > 0 ? (
-        <div className="max-w-[550px] mx-auto">
+        <div className="max-w-550px mx-auto">
           {posts.map((post) => (
             <VideoCard key={post.id} post={post} />
           ))}
