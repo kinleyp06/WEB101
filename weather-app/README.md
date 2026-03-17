@@ -30,5 +30,10 @@ const WEATHER_API_KEY = 'API Key'; // Replace with your API Key
 - Country codes work best as two letters (US, GB, JP)
 
 ## Final Output:
+<img src="Images/weather-app.png" width="300"> 
+<img src="Images/GET.png" width="300">
+<img src="Images/POST.png" width="300">
 
-![alt text](weather-app.png)
+<img src="Images/Saved location.png" width="300">
+<img src="Images/edit location.png" width="300">
+<img src="Images/API info.png" width="300">
