@@ -31,4 +31,4 @@ const WEATHER_API_KEY = 'API Key'; // Replace with your API Key
 
 ## Final Output:
 
-<img src=""D:\weather-app.png"" alt="Alt text" style="width:100px;height:100px;">
+![alt text](weather-app.png)
