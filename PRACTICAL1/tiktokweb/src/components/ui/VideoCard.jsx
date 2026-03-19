@@ -32,12 +32,12 @@ export default function VideoCard({ post }) {
         {/* Audio info */}
         <div className="flex items-center text-sm mb-3">
           <FaMusic className="mr-2 text-xs" />
-          <span className="truncate max-w-[250px]">{audio}</span>
+          <span className="truncate max-w-(250px)">{audio}</span>
         </div>
         
         <div className="flex">
           {/* Video container */}
-          <div className="mr-5 w-[300px] h-[530px] bg-black rounded-md flex items-center justify-center relative overflow-hidden">
+          <div className="mr-5 w-300px h-530px bg-black rounded-md flex items-center justify-center relative overflow-hidden">
             <p className="text-white">Video Placeholder</p>
             <div className="absolute bottom-4 left-4 text-white text-sm">
               <p className="mb-1">0:30</p>
